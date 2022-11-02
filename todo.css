@@ -14,21 +14,22 @@
 }
 
 .app {
-    position: relative;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 336px;
-    height: 236px;
+    width: 25%;
+    height: 33%;
     border: 1px solid #C4C4C4;
     border-radius: 10px;
     border-top: 29px solid #FFDC40;
     border-radius: 10px;
-    gap: 25px;
+    gap: 30px;
 }
 
 .top-order img {
+    
     width: 30px;
     position: relative;
     align-self: end;
@@ -39,6 +40,7 @@
 }
 
 .top-order {
+    
     cursor: pointer;
     width: 100%;
     display: flex;
@@ -50,6 +52,7 @@
 h1 {
     flex-direction: column;
     align-self: center;
+    margin-block-start: 20px;
 }
 
 input,.input-part {
@@ -75,7 +78,7 @@ input+img {
     display: flex;
     flex-direction: row;
     background-color: #833AE0;
-    
+    margin-block-end: 20px;
     align-items: center;
     color: white;
     border-radius: 71px;
@@ -95,4 +98,13 @@ input+img {
     justify-content: center;
     align-items: center;
     
+}
+h1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: capitalize;
 }
