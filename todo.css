@@ -62,15 +62,14 @@ input,.input-part {
     border-radius: 10px;
 }
 
-input+img {
+input+i {
     cursor: pointer;
     position: relative;
     left: 80%;
     bottom: 80%;
     width: 20px;
     height: 20px;
-    border: 1px solid #C4C4C4;
-    border-radius: 71px;
+    
     
 }
 
@@ -107,4 +106,18 @@ h1{
     line-height: 30px;
     text-align: center;
     text-transform: capitalize;
+}
+
+i{
+    color: gray;
+    
+}
+.notes{
+    display: none;
+    border: 1px solid gray;
+    border-radius: 12px;
+}
+.notes i{
+    cursor: pointer;
+    /* padding: 0 40px; */
 }
