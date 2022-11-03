@@ -1,24 +1,79 @@
-let input=document.querySelector('input');
-input.style.paddingLeft='12px'
-let button=document.querySelector('.btn')
-let notes=document.querySelector('.notes')
-let app=document.querySelector('.app')
-let del=document.getElementsByTagName('i');
-button.addEventListener('click',function(x){
-    //button.style.display='none'
+let input = document.querySelector('input');
+let button = document.querySelector('.btn')
+let notes = document.querySelector('.notes')
+let order = document.querySelector('img')
+
+button.addEventListener('click', function (x) {
+
     x.preventDefault();
-    notes.style.display='block'
-    let newNote=document.createElement('div');
-    newNote.innerText=input.value;
-    newNote.setAttribute('class','input-part')
-    newNote.style.border='none'
-    newNote.style.marginBottom='10px'
-    newNote.style.display='flex'
-    newNote.style.alignItems='center'
-    newNote.style.padding='0 20px'
-    newNote.innerHTML+=`<i class="fa fa-trash" aria-hidden="true"></i>`
-    newNote.style.justifyContent='space-between'
-    notes.append(newNote)
-    console.log(input.value)
+    if (input.value) {
+
+        notes.style.display = 'block'
+
+        let newNote = document.createElement('div');
+        newNote.innerText = input.value;
+        newNote.setAttribute('class', 'input-part')
+        newNote.classList.add('active')
+        newNote.innerHTML += `<i class="fa fa-trash" aria-hidden="true"></i>`
+        notes.append(newNote)
+        removeEl();
+    }
+    else {
+        alert('bos qeyd')
+    }
+
+})
+
+function removeEl() {
+    let del = document.querySelectorAll('i');
+    del.forEach((element, index) => {
+        if (index != 0) {
+            element.addEventListener('click', function (x) {
+                x.preventDefault();
+            //    let newDel = document.querySelectorAll('.notes i');
+            //    newDel=['<i></i>',...newDel];
+                
+                element.parentElement.remove();
+                notes=document.querySelector('.notes');
+                    console.log(notes.children.length)
+                    console.log(notes)
+
+                    if(notes.children.length==0){
+                        notes.style.display='none'
+                    }
+
+
+
+            })
+        }
+    });
+
+
+    // del = document.querySelectorAll('i');
+}
+let flag = false;
+order.addEventListener('click', function (event) {
+
+    event.preventDefault();
+    let emp = [];
+    let box = document.querySelectorAll('.notes .input-part')
+    for (let index = 0; index < box.length; index++) {
+        emp.push(box[index].innerText)
+    }
+    emp.sort();
+    if (flag == false) {
+        order.classList.add('transformed')
+        flag = true
+    }
+    else if (flag == true) {
+        order.classList.remove('transformed')
+        emp.reverse();
+        flag = false;
+    }
+    for (let index = 0; index < emp.length; index++) {
+        box[index].innerHTML = emp[index] + '<i class="fa fa-trash" aria-hidden="true"></i>'
+    }
+    removeEl();
+
 })
 

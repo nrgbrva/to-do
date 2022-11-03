@@ -14,12 +14,12 @@
 }
 
 .app {
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 25%;
+    width: 334px;
     height: 33%;
     border: 1px solid #C4C4C4;
     border-radius: 10px;
@@ -29,18 +29,20 @@
 }
 
 .top-order img {
-    
+
     width: 30px;
     position: relative;
     align-self: end;
     right: 30px;
-    
-    
+    top: 20px;
+    margin-right: 20px;
+
+
 
 }
 
 .top-order {
-    
+
     cursor: pointer;
     width: 100%;
     display: flex;
@@ -55,22 +57,27 @@ h1 {
     margin-block-start: 20px;
 }
 
-input,.input-part {
-    width: 286px;
+
+.input-part {
+    padding: 0 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 40px;
     border: 1px solid #C4C4C4;
     border-radius: 10px;
 }
-
+.top-order+.input-part{
+    width: 80%;
+}
 input+i {
     cursor: pointer;
-    position: relative;
-    left: 80%;
-    bottom: 80%;
+
     width: 20px;
     height: 20px;
-    
-    
+
+
 }
 
 .btn {
@@ -96,9 +103,10 @@ input+i {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
-h1{
+
+h1 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 900;
@@ -108,16 +116,47 @@ h1{
     text-transform: capitalize;
 }
 
-i{
+i {
     color: gray;
-    
+
+}
+
+.notes {
+    /* display: none; */
+    border: 1px solid gray;
+    border-radius: 12px;
+    width: 80%;
+}
+
+.notes i {
+    cursor: pointer;
+    /* padding: 0 40px; */
+}
+.active{
+
+    border: none;
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    /* padding: 0 20px; */
+    justify-content: space-between;
+}
+.transformed{
+    transform: rotate(180deg);
+    transition: all 0.3s;
+}
+input{
+    border: none;
+    outline: none;
+}
+
+i{
+    width: 15px !important;
+    height: 15px !important;
 }
 .notes{
     display: none;
-    border: 1px solid gray;
-    border-radius: 12px;
 }
-.notes i{
-    cursor: pointer;
-    /* padding: 0 40px; */
+.passive{
+    display: none;
 }
