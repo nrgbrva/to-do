@@ -27,10 +27,10 @@ function removeEl() {
             element.addEventListener('click', function (x) {
                 x.preventDefault();
                 element.parentElement.remove();
-                notes=document.querySelector('.notes');
-                    if(notes.children.length==0){
-                        notes.style.display='none'
-                    }
+                notes = document.querySelector('.notes');
+                if (notes.children.length == 0) {
+                    notes.style.display = 'none'
+                }
             })
         }
     });

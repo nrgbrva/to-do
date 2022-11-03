@@ -68,9 +68,11 @@ h1 {
     border: 1px solid #C4C4C4;
     border-radius: 10px;
 }
-.top-order+.input-part{
+
+.top-order+.input-part {
     width: 80%;
 }
+
 input+i {
     cursor: pointer;
 
@@ -132,7 +134,8 @@ i {
     cursor: pointer;
     /* padding: 0 40px; */
 }
-.active{
+
+.active {
 
     border: none;
     display: flex;
@@ -141,25 +144,34 @@ i {
     /* padding: 0 20px; */
     justify-content: space-between;
 }
-.transformed{
+
+.transformed {
     transform: rotate(180deg);
     transition: all 0.3s;
 }
-input{
+
+input {
     border: none;
     outline: none;
 }
 
-i{
+i {
     width: 15px !important;
     height: 15px !important;
 }
-.notes{
+
+.notes {
     display: none;
 }
-.passive{
+
+.passive {
     display: none;
 }
-i:hover{
+
+i:hover {
     color: #833AE0;
+}
+
+input {
+    width: 100%;
 }
