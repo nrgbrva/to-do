@@ -160,3 +160,6 @@ i{
 .passive{
     display: none;
 }
+i:hover{
+    color: #833AE0;
+}

@@ -4,12 +4,9 @@ let notes = document.querySelector('.notes')
 let order = document.querySelector('img')
 
 button.addEventListener('click', function (x) {
-
     x.preventDefault();
     if (input.value) {
-
         notes.style.display = 'block'
-
         let newNote = document.createElement('div');
         newNote.innerText = input.value;
         newNote.setAttribute('class', 'input-part')
@@ -23,33 +20,20 @@ button.addEventListener('click', function (x) {
     }
 
 })
-
 function removeEl() {
     let del = document.querySelectorAll('i');
     del.forEach((element, index) => {
         if (index != 0) {
             element.addEventListener('click', function (x) {
                 x.preventDefault();
-            //    let newDel = document.querySelectorAll('.notes i');
-            //    newDel=['<i></i>',...newDel];
-                
                 element.parentElement.remove();
                 notes=document.querySelector('.notes');
-                    console.log(notes.children.length)
-                    console.log(notes)
-
                     if(notes.children.length==0){
                         notes.style.display='none'
                     }
-
-
-
             })
         }
     });
-
-
-    // del = document.querySelectorAll('i');
 }
 let flag = false;
 order.addEventListener('click', function (event) {
